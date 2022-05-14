@@ -1,7 +1,14 @@
 public class Massive {
-    public int maximum (int [] num) {
-        int max = 0;
-        for (int i =0; i < num.length; i++) {
+    public static int maximum (int [] num) throws MassiveException {
+
+        if (num == null){
+            throw new MassiveException("Array is NULL");
+        } else if (num.length == 0){
+            throw new MassiveException("Array is empty");
+        }
+
+        int max = num[0];
+        for (int i =1; i < num.length; i++) {
             if (max < num[i]) {
                 max = num[i] ;
             }
@@ -9,7 +16,14 @@ public class Massive {
         return max;
     }
 
-    public boolean sortArray (int [] num) {
+    public static boolean sortArray  (int [] num) throws MassiveException {
+
+        if (num == null){
+            throw new MassiveException("Array is NULL");
+        } else if (num.length == 0){
+            throw new MassiveException("Array is empty");
+        }
+
         boolean srt = true;
         for (int i = 1; i< num.length; i++) {
             if (num[i - 1] > num[i]) {
@@ -20,7 +34,13 @@ public class Massive {
         return srt;
     }
 
-    public int [] reverse (int [] num) {
+    public static int [] reverse (int [] num) throws MassiveException {
+
+        if (num == null){
+            throw new MassiveException("Array is NULL");
+        } else if (num.length == 0){
+            throw new MassiveException("Array is empty");
+        }
 
         int k = (num.length%2==0)?0:1;
         int temp;
