@@ -3,6 +3,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import java.rmi.server.ExportException;
+import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
@@ -23,6 +24,7 @@ public class MassiveTest {
         boolean expected = true;
         assertEquals(expected,actual);
     }
+    
 
     @Test
     public void unsortedArray() throws MassiveException{
@@ -38,6 +40,15 @@ public class MassiveTest {
         int [] expected = new int[] {1,5,3,7,4,2};
         arr = Massive.reverse(arr);
         assertArrayEquals(expected, arr);
+    }
+
+    @Test
+    public void negativeReverse() throws MassiveException{
+        int [] arr = new int[] {1,2,3,7,4,5};
+        int [] expected = new int[] {1,2,3,7,4,5};
+        arr = Massive.reverse(arr);
+        assertFalse(Arrays.equals(arr, expected));
+
     }
 
 
