@@ -44,13 +44,14 @@ public class Massive {
         return num;
     }
 
-    private static int [] checkArray (int [] num) throws MassiveException {
+    private static void checkArray (int [] num) throws MassiveException {
         if (num == null){
             throw new MassiveException("Array is NULL");
-        } else if (num.length == 0){
+        }
+        if (num.length == 0){
             throw new MassiveException("Array is empty");
         }
-        return num;
+
     }
 
 }
