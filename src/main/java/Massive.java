@@ -1,5 +1,5 @@
 public class Massive {
-    public static int maximum (int [] num) throws MassiveException {
+    public static int maximum (int [] num) {
 
         checkArray(num);
 
@@ -12,7 +12,7 @@ public class Massive {
         return max;
     }
 
-    public static boolean sortArray  (int [] num) throws MassiveException {
+    public static boolean sortArray  (int [] num)  {
 
         checkArray(num);
 
@@ -26,7 +26,7 @@ public class Massive {
         return srt;
     }
 
-    public static int [] reverse (int [] num) throws MassiveException {
+    public static int [] reverse (int [] num) {
 
         checkArray(num);
 
@@ -44,7 +44,7 @@ public class Massive {
         return num;
     }
 
-    private static void checkArray (int [] num) throws MassiveException {
+    private static void checkArray (int [] num) {
         if (num == null){
             throw new MassiveException("Array is NULL");
         }

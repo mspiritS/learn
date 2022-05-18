@@ -55,7 +55,7 @@ public class MassiveTest {
     public ExpectedException exceptionRule = ExpectedException.none();
 
     @Test
-    public void checkArrayEmptyException() throws MassiveException{
+    public void checkArrayEmptyException() {
         int [] arr = new int[0];
 
         exceptionRule.expect(MassiveException.class);
@@ -64,7 +64,7 @@ public class MassiveTest {
     }
 
     @Test
-    public void checkArrayNullException() throws MassiveException{
+    public void checkArrayNullException() {
         int [] arr = null;
 
         exceptionRule.expect(MassiveException.class);
