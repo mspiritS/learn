@@ -1,4 +1,4 @@
-import task2.fileUtils;
+import task2.FileUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,9 +7,9 @@ import java.util.Arrays;
 
 public class Program {
 
-    public static void main (String [] args) throws FileNotFoundException {
+    public static void main (String [] args) throws IOException {
 
-        System.out.println(fileUtils.entryWord("src/main/java/file.txt","word"));
+        System.out.println(FileUtils.entryWord("src/main/java/file.txt","word"));
 
     }
 }
