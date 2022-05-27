@@ -1,15 +1,15 @@
+import task2.FileUtils;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Arrays;
 
 public class Program {
 
-    public static void main (String [] args) throws MassiveException {
+    public static void main (String [] args) throws IOException {
 
-        int [] nums = new int[] {1,2,3,5,6,12};
-
-        System.out.println("Максимальное число массива " + Massive.maximum(nums));
-
-        System.out.println(Arrays.toString(Massive.reverse(nums)));
-
+        System.out.println(FileUtils.entryWord("src/main/java/file.txt","word"));
 
     }
 }
