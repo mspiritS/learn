@@ -1,4 +1,5 @@
 import task2.FileUtils;
+import task3.BigFileUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,7 +10,7 @@ public class Program {
 
     public static void main (String [] args) throws IOException {
 
-        System.out.println(FileUtils.entryWord("src/main/java/file.txt","word"));
+        BigFileUtils.readBigFile("src/main/java/test.log","get", "post", "bitrix","ajax");
 
     }
 }
